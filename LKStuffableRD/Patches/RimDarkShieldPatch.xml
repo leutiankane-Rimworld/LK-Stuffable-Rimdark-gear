@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!--VEF Shield Bubble-->
+<Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/tickerType</xpath>
+		<nomatch Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
+		<value>
+		<tickerType />
+		</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/tickerType</xpath>
+	<value>
+	<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+	<tickerType>Normal</tickerType>
+	</li>
+    </value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
+		<value>
+		<comps />
+		</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/comps</xpath>
+	<value>
+	<li Class="VEF.Apparels.CompProperties_ShieldBubble" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<compClass>VEF.Apparels.CompShieldBubble</compClass>
+		<blockRangedAttack>true</blockRangedAttack>
+		<blockMeleeAttack>false</blockMeleeAttack>
+		<showWhenDrafted>true</showWhenDrafted>
+		<showOnHostiles>true</showOnHostiles>
+		<showOnNeutralInCombat>true</showOnNeutralInCombat>
+		<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+		<EnergyShieldRechargeRate>0.9</EnergyShieldRechargeRate>
+		<EnergyShieldEnergyMax>1000</EnergyShieldEnergyMax>
+		<minShieldSize>1.8</minShieldSize>
+		<maxShieldSize>2.4</maxShieldSize>
+		<disableRotation>true</disableRotation>
+    <chargeFullyWhenMade>true</chargeFullyWhenMade>
+	</li>
+    </value>
+	</Operation>
+</Patch>
