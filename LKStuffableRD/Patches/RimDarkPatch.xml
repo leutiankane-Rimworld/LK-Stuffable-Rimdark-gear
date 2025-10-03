@@ -29,6 +29,25 @@
 		</value>
 	</Operation>
 	<!--VEF Shield Bubble-->
+
+	<Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/tickerType</xpath>
+		<nomatch Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
+		<value>
+		<tickerType />
+		</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/tickerType</xpath>
+	<value>
+	<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+	<tickerType>Normal</tickerType>
+	</li>
+    </value>
+	</Operation>
+	
 	<Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
