@@ -6,16 +6,14 @@
 		<nomatch Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
 		<value>
-		<tickerType />
+		<tickerType>Normal</tickerType>
 		</value>
 		</nomatch>
 	</Operation>
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/tickerType</xpath>
 	<value>
-	<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 	<tickerType>Normal</tickerType>
-	</li>
     </value>
 	</Operation>
 
@@ -39,7 +37,7 @@
 		<showOnHostiles>true</showOnHostiles>
 		<showOnNeutralInCombat>true</showOnNeutralInCombat>
 		<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-		<EnergyShieldRechargeRate>0.9</EnergyShieldRechargeRate>
+		<EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
 		<EnergyShieldEnergyMax>1000</EnergyShieldEnergyMax>
 		<minShieldSize>1.8</minShieldSize>
 		<maxShieldSize>2.4</maxShieldSize>
